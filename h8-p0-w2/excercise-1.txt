@@ -1,0 +1,68 @@
+1. Newton Second Law
+    
+    START
+        STORE `m` with 600
+        STORE `a` with 2
+        CALCULATE "m" times/multiply "a" 
+        DISPLAY `area`
+    END
+
+var m = 600;
+var a = 2;
+CALCULATE = m * a;
+console.log(CALCULATE);
+
+
+2. Tahun Kabisat
+
+    START
+        STORE "year" with "number"
+        IF "year" mod 4 equal to 0 THEN
+        IF "year" mod 100 not equal to 0 
+        ELSE IF "year" mod 4 equal to 0, THEN
+        IF "year" mod 100 equal to 0 THEN
+        IF "year" mod 400 equal to 0
+        DISPLAY "year adalah tahun kabisat"
+        ELSE
+        DISPLAY "year bukan tahun kabisat"
+        DISPLAY "year
+    END
+
+var year = 2018;
+if (year % 4 == 0 && year % 100 != 0 || year % 4 == 0 && year % 100 == 0 && year % 400){
+        console.log((year) + ` adalah tahun kabisat`);
+    }else{
+        console.log((year) + ` bukan tahun kabisat`);
+    }
+
+
+3. Laundry Day
+
+    START
+        STORE "laundry" with 0
+        WHILE "laundry" <20
+        ADD "laundry" by 1
+        DISPLAY "Laundry process"  
+    END
+
+var laundry = 0;
+while(laundry < 20)
+laundry++
+console.log(laundry)
+
+
+4. Periksa Kuku
+    START
+        STORE `murid` with 40
+        IF `murid` mod 2 equal to 0
+        DISPLAY "mendapat pujian dari guru"
+        ELSE
+        DISPLAY "mendapat hukuam dari guru"
+    END
+
+var murid = 40
+if (murid % 2 == 0){
+    console.log("medapat pujian dari guru");
+    }else{
+    console.log("medapat hukuman dari guru");
+}
