@@ -23,11 +23,47 @@ RULES
 
 //Pseudocode
 /*
- * 
- * 
- * 
- *
- */
+Start
+	WRITE variable tampung EQUAL param1, param2, param3 in array
+	SORTING variable tampung
+	ENDSORT
+
+
+	WRITE variable arr EQUAL empty array
+	LOOPING
+		variable index EQUAL tampung[0] PLUS 1;
+		index LESS THEN tampung[2];
+		index++
+	ENDLOOP
+
+	IF index NOT EQUAL tampung[1]
+		arr.push(index)
+	ENDIF
+
+
+	WRITE variable str EQUAL empty string
+	LOOPING
+		variable index EQUAL 0;
+		index LESS THEN arr.length;
+		index++
+	ENDLOOP
+
+
+	IF index EQUAL arr.length - 1
+		str += arr[i]
+	ELSE
+		str += arr[i] + ', '
+	ENDIF
+
+
+	IF temp.length NOT EQUAL 0
+		RETURN str
+	ELSE
+		RETURN 'Tidak ada angka sama sekali'
+	ENDIF
+End
+*/
+
 
 function lostNumbers(first, second, third) {
 	let tampung = [first, second, third]
