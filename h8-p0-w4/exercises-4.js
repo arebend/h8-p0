@@ -12,11 +12,57 @@ Dan apabila dialam modus hanya ada 1 nilai yang sama maka function akan me-retur
 
 function cariModus(arr) {
     // you can only write your code here!
-    for (let i = 0; i < arr.length; i++) {
-        console.log(arr[i]);
+    // var count = 0;
+    // var modus = undefined;
+    // for (var i = 0; i < arr.length; i++) {
+    //     var newCount = 0;
+    //     for (var j = 0; j < arr.length; j++) {
+    //         if (arr[i] === arr[j] && i !== j) {
+    //             newCount++;
+    //             if (newCount > count) {
+    //                 count = newCount;
+    //                 modus = arr[i];
+    //             }
+    //         }
+    //     }
+    // }
 
+    // if (modus === undefined) {
+    //     return -1;
+    // } else if (newCount === arr.length - 1) {
+    //     return -1;
+    // }
+    // return modus;
+
+    let result = [];
+    for (let i = 0; i < arr.length; i++) {
+        let check = false;
+        for (let j = 0; j < result.length; j++) {
+            if (arr[i] === result[j][0]) {
+                check = true;
+                result[j][1]++;
+            }
+        }
+        if (check === false)
+            result.push([arr[i], 1]);
     }
-}
+    // return result
+    if (result.length === arr.length || result.length === 1)
+        return -1;
+    else {
+        for (let i = 0; i < result.length; i++) {
+            for (let j = i + 1; j < result.length; j++) {
+                if (result[i][1] - result[j][1]) {
+                    let temp = result[i]
+                    result[i] = result[j]
+                    result[j] = temp
+                }
+            }
+        }
+        return result[0][0] - 1;
+    }
+};
+
 
 // TEST CASES
 console.log(cariModus([10, 4, 5, 2, 4])); // 4
